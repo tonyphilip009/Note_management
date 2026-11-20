@@ -107,3 +107,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 DELETE http://127.0.0.1:8000/task/1/
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1MTY0NTU2LCJpYXQiOjE3OTUxNjQyNTYsImp0aSI6ImM3NzBmMWExZmZlYjQ4M2Y5NTM1MmUxMTA4MmM1ODMyIiwidXNlcl9pZCI6IjQifQ.c2Grum9Yb-YKwhJiCfQj8Z9ATM1YHtUHu3IJAdfU2og
+
+### jwt_logout
+
+POST http://127.0.0.1:8000/jwt_logout/
+Content-Type:   application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk1MTY3MDAwLCJpYXQiOjE3OTUxNjY3MDAsImp0aSI6IjZhYTA0NWVmMWI4YTRkM2RiMzg2N2JmMzVhZjI0MzJkIiwidXNlcl9pZCI6IjQifQ.9yxy3CsJ4D6TIDnXb4G_xom-xe4HljLGveSQ-R97Ji0
+
+{
+    "refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NTI1MzEwMCwiaWF0IjoxNzk1MTY2NzAwLCJqdGkiOiJiMjkzOTExYTMyNWE0MGVjOWZjZTgwMzkzYWI5ZDVkMiIsInVzZXJfaWQiOiI0In0.gV9nvKTBuP8-IU4NtbOOEyX0je3Q4wBOkUblWZtmlpo"
+}

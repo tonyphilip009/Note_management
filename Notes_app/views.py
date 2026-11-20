@@ -3,6 +3,7 @@ from .serializers import *
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import get_object_or_404
+from rest_framework_simplejwt.tokens import RefreshToken
 
 class RegistrationView(APIView):
 
@@ -121,3 +122,15 @@ class RetriveUpdateDelete(APIView):
         task_object=get_object_or_404(TaskDb,id=pk,user=request.user)
         task_object.delete()
         return Response(data={"message":"deleted"})
+
+class jwt_logout(APIView):
+
+    permission_classes = [IsAuthenticated]
+
+    def post(self,request):
+        try:
+            refresh_token=request.data.get("refresh")
+            token=RefreshToken(refresh_token).blacklist()
+            return Response(data={"message":"logged out"})
+        except Exception:
+            return Response("invalid refresh token")
